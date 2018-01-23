@@ -15,6 +15,7 @@
 		040DA1B22017030000DCE5C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DA1B12017030000DCE5C5 /* main.m */; };
 		040DA1BC2017030000DCE5C5 /* SCPickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DA1BB2017030000DCE5C5 /* SCPickerViewTests.m */; };
 		040DA1C72017030000DCE5C5 /* SCPickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DA1C62017030000DCE5C5 /* SCPickerViewUITests.m */; };
+		040DA1D72017032E00DCE5C5 /* AUPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DA1D62017032E00DCE5C5 /* AUPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,10 @@
 		040DA1C22017030000DCE5C5 /* SCPickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCPickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040DA1C62017030000DCE5C5 /* SCPickerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCPickerViewUITests.m; sourceTree = "<group>"; };
 		040DA1C82017030100DCE5C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040DA1D52017032E00DCE5C5 /* AUPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUPickerView.h; sourceTree = "<group>"; };
+		040DA1D62017032E00DCE5C5 /* AUPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUPickerView.m; sourceTree = "<group>"; };
+		040DA1D920170E7700DCE5C5 /* SCMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCMacros.h; sourceTree = "<group>"; };
+		040DA1DB20170F1500DCE5C5 /* SCPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCPrefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,8 @@
 		040DA1A12017030000DCE5C5 /* SCPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				040DA1D820170E3300DCE5C5 /* Global */,
+				040DA1D42017032E00DCE5C5 /* PickerView */,
 				040DA1A22017030000DCE5C5 /* AppDelegate.h */,
 				040DA1A32017030000DCE5C5 /* AppDelegate.m */,
 				040DA1A52017030000DCE5C5 /* ViewController.h */,
@@ -108,6 +115,7 @@
 				040DA1A82017030000DCE5C5 /* Main.storyboard */,
 				040DA1AB2017030000DCE5C5 /* Assets.xcassets */,
 				040DA1AD2017030000DCE5C5 /* LaunchScreen.storyboard */,
+				040DA1DB20170F1500DCE5C5 /* SCPrefix.pch */,
 				040DA1B02017030000DCE5C5 /* Info.plist */,
 				040DA1B12017030000DCE5C5 /* main.m */,
 			);
@@ -130,6 +138,23 @@
 				040DA1C82017030100DCE5C5 /* Info.plist */,
 			);
 			path = SCPickerViewUITests;
+			sourceTree = "<group>";
+		};
+		040DA1D42017032E00DCE5C5 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				040DA1D52017032E00DCE5C5 /* AUPickerView.h */,
+				040DA1D62017032E00DCE5C5 /* AUPickerView.m */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		040DA1D820170E3300DCE5C5 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				040DA1D920170E7700DCE5C5 /* SCMacros.h */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040DA1D72017032E00DCE5C5 /* AUPickerView.m in Sources */,
 				040DA1A72017030000DCE5C5 /* ViewController.m in Sources */,
 				040DA1B22017030000DCE5C5 /* main.m in Sources */,
 				040DA1A42017030000DCE5C5 /* AppDelegate.m in Sources */,
@@ -429,11 +455,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BUL3PX47WF;
+				GCC_PREFIX_HEADER = SCPickerView/SCPrefix.pch;
 				INFOPLIST_FILE = SCPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.bundle.SCPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -442,11 +473,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BUL3PX47WF;
+				GCC_PREFIX_HEADER = SCPickerView/SCPrefix.pch;
 				INFOPLIST_FILE = SCPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.bundle.SCPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

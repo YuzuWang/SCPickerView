@@ -1,0 +1,13 @@
+//
+//  SCPrefix.pch
+//  SCPickerView
+//
+//  Created by Mac on 2018/1/23.
+//
+
+#ifndef SCPrefix_pch
+#define SCPrefix_pch
+
+#import "SCMacros.h"
+
+#endif /* SCPrefix_pch */
